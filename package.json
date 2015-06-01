@@ -1,0 +1,20 @@
+{
+  "name": "express-rethinkdb-logger",
+  "description": "An example express web server with middleware that logs all requests to RethinkDB",
+  "author": "NodeSocket, LLC",
+  "contributors": [
+    {
+      "name": "Justin Keller",
+      "email": "justin@commando.io"
+    }
+  ],
+  "version": "0.0.1",
+  "dependencies": {
+    "cli-color": "^1.0.0",
+    "express": "^4.12.4",
+    "http-status": "^0.1.8",
+    "morgan": "^1.5.3",
+    "node-uuid": "^1.4.3",
+    "rethinkdb": "^2.0.0-1"
+  }
+}
