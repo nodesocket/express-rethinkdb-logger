@@ -12,7 +12,7 @@ var config     = require('./config'),
 
     function onExit(error) {
         if(error) {
-            console.error(colors.red('Uncaught exception: ') + colors.redBright(error.message));
+            console.error(colors.red('Uncaught exception ') + colors.redBright(error.message));
         }
 
         if(server) {

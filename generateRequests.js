@@ -1,5 +1,6 @@
 var config  = require('./config'),
-    request = require('request');
+    request = require('request'),
+    colors  = require('cli-color');
 
 var totalRequests = 500;
 if(process.argv[2]) {
@@ -10,9 +11,9 @@ for(var i = 0; i < totalRequests; i++) {
     (function(i) {
         request('http://localhost:' + config.port + '/', function(error, response, body) {
             if(error) {
-                console.error('Error ' + error.message);
+                console.error(colors.redBright('Request ' + (i + 1) + ' - ' + error.message));
             } else {
-                console.info('Request ' + (i + 1) + ' - ' + response.statusCode);
+                console.info(colors.greenBright('Request ' + (i + 1) + ' - ' + response.statusCode));
             }
         });
     })(i);
