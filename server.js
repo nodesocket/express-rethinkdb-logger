@@ -10,15 +10,23 @@ var config     = require('./config'),
     rethinkdbConnection,
     server;
 
-    function onExit() {
-        if(rethinkdbConnection) {
-            rethinkdbConnection.close();
-            console.info(colors.green('Connection to RethinkDB closed.'));
+    function onExit(error) {
+        if(error) {
+            console.error(colors.red('Uncaught exception: ') + colors.redBright(error.message));
         }
 
         if(server) {
             server.close();
             console.info(colors.green('Server closed.'));
+        }
+
+        if(rethinkdbConnection) {
+            rethinkdbConnection.close();
+            console.info(colors.green('Connection to RethinkDB closed.'));
+        }
+
+        if(error) {
+            process.exit(1);
         }
 
         process.exit(0);
