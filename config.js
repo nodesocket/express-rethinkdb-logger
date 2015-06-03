@@ -3,7 +3,7 @@ var config = {};
 config.port = process.env.port || 3000;
 
 config.rethinkdb = {
-    host: 'rethink1.commando.io',
+    host: 'your-rethinkdb-server-here',
     port: 28015,
     db: 'logs',
     table: 'requests'

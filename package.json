@@ -13,7 +13,6 @@
     "cli-color": "^1.0.0",
     "express": "^4.12.4",
     "http-status": "^0.1.8",
-    "limiter": "^1.0.5",
     "morgan": "^1.5.3",
     "node-uuid": "^1.4.3",
     "request": "^2.57.0",
